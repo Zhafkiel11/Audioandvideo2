@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <style>
+
+        /*bakcground color ng buong control*/
+    audio::-webkit-media-controls-panel {
+      background-color: #9130847a;
+    }
+        /* mute button*/
+    audio::-webkit-media-controls-mute-button {
+      background-color: #61c3e44d;
+      border-radius: 10%;
+    }
+      
+    audio::-webkit-media-controls-volume-slider {
+      background-color: #61c3e44d;
+      border-radius: 10%;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+       /*play*/
+    audio::-webkit-media-controls-play-button {
+      background-color: #61c3e44d;
+      border-radius: 50%;
+    }
+    audio::-webkit-media-controls-play-button:hover {
+      background-color: rgba(177,212,224, .7);
+    }
+       /*time*/
+    audio::-webkit-media-controls-current-time-display {
+      color: #fff;
+    }
+    
+    audio::-webkit-media-controls-timeline {
+      background-color: #61c3e44d;
+      border-radius: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    
+
+    audio{
+      margin-top: 20%;
+    }
+
+    body{
+        background-image: url("Anime.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+
+    }
+
+
+    audio {
+  --g: 7px;     /* the gap */
+  --b: 10px;    /* border thickness*/
+  --c: #ec5de5bd; /* the color */
+  
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: #b950ce00 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+}
+audio:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+  width: 279px;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  gap: 30px;
+}
+    </style>
+    <script>
+    
+    </script>
+    <audio controls id="myVideo">
+        <source src="sapientdream - Pastlives (lyrics).mp3" type="audio/mp3">
+        Try another Browser.
+    </audio>
+</body>
+</html>
